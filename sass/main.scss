@@ -1,0 +1,22 @@
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./utils/placeholders";
+
+@import "./base/normalize";
+@import "./base/fonts";
+@import "./base/global";
+
+@import "./components/common";
+@import "./components/header";
+
+@import "./components/heroes";
+@import "./components/heroes-button";
+@import "./components/modal-window";
+@import "./components/form-feedback";
+
+@import "./components/section-skills";
+@import "./components/section-work";
+@import "./components/section-team";
+@import "./components/section-clients";
+
+@import "./components/footer";
