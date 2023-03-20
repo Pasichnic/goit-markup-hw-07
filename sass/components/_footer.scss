@@ -1,0 +1,150 @@
+.footer {
+  background: getColor("background-footer-color");
+  &-container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.footer-boxJoin {
+  display: flex;
+
+  &__address {
+    font-style: normal;
+    width: 231px;
+    margin-top: 20px;
+    margin-right: 70px;
+  }
+}
+
+.footer-contact {
+  &__addres--link {
+    display: inline-block;
+    text-decoration: none;
+    color: getColor("white-text-color");
+  }
+
+  &__link {
+    color: getColor("contacts-color");
+    margin-top: 9px;
+    @include transition(color);
+
+    &:hover,
+    &:focus {
+      color: getColor("accent-color");
+    }
+  }
+}
+
+.footer-joinTank {
+  margin-right: 93px;
+  width: 206px;
+
+  &__title {
+    margin-top: 0;
+    color: getColor("white-text-color");
+    font-weight: $font-bold;
+    line-height: 1.14px;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__link {
+    display: inline-flex;
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+
+    align-items: center;
+    justify-content: center;
+
+    @include transition(background);
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background: getColor("accent-color");
+    }
+  }
+
+  &__link--icon {
+    fill: getColor("white-text-color");
+  }
+}
+
+.footer-boxSubscribe {
+  width: 570px;
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    color: getColor("white-text-color");
+    font-weight: $font-bold;
+    line-height: 1.14px;
+
+    text-transform: uppercase;
+  }
+
+  &__form {
+    display: flex;
+  }
+
+  &__input {
+    display: inline-flex;
+    margin-top: 0;
+    margin-right: 12px;
+    padding: 15px 16px;
+
+    width: 358px;
+    height: 50px;
+
+    color: getColor("contacts-color");
+    background-color: getColor("background-footer-color");
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+
+    @include transition(border);
+
+    &:hover,
+    &:focus {
+      border: 1px solid getColor("accent-color");
+      outline: none;
+    }
+  }
+
+  &__btn {
+    display: inline-flex;
+
+    padding: 10px 28px;
+    width: 200px;
+    height: 50px;
+
+    @include fontParam(700, 16px, 1.88, 0.06em);
+    color: getColor("white-text-color");
+    background: getColor("accent-color");
+    border-radius: 4px;
+    border: none;
+
+    text-align: center;
+
+    @include transition(background);
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background: getColor("button-color");
+    }
+  }
+
+  &__iconSend {
+    margin-left: 10px;
+  }
+}
