@@ -1,0 +1,29 @@
+.portfolio-filter {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 50px;
+  justify-content: center;
+
+  &__button {
+    padding: 6px 22px;
+
+    @include fontParam(500, 16px, 1.62);
+
+    background: getColor("background-team-color");
+    color: getColor("title-text-color");
+    text-shadow: getColor("text-shadow-button");
+
+    border-radius: 4px;
+    border: none;
+
+    @include transition(background);
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background: getColor("accent-color");
+      color: getColor("white-text-color");
+      box-shadow: getColor("shadow-portfolio-button");
+    }
+  }
+}
