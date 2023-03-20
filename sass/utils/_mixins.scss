@@ -1,0 +1,15 @@
+@mixin fontParam(
+$fontWeight: 400,
+$fontSize: 14px,
+$lineHeight: 1.71,
+$letterSpacing: 0.03em
+)
+{
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    letter-spacing: $letterSpacing;
+}
+@mixin transition($targetAnimation){
+    transition: $targetAnimation 250ms $cubic-bezier;
+}
