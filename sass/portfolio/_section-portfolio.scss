@@ -1,0 +1,55 @@
+.section-portfolio {
+  @extend %sectionPadding;
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    display: inline-flex;
+    width: calc((100% - 60px) / 3);
+    margin-right: 30px;
+    margin-bottom: 30px;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+
+    &:nth-last-child(-n + 3) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    padding-bottom: 20px;
+    text-decoration: none;
+    border: 1px solid #eeeeee;
+
+    overflow: hidden;
+
+    &:hover,
+    &:focus {
+      box-shadow: getColor("box-shadow-card");
+      outline: none;
+    }
+  }
+
+  &__link--card {
+    margin-top: 0;
+    margin-bottom: 4px;
+    margin-left: 24px;
+
+    @include fontParam(700, 18px, 2, 0.06em);
+    color: getColor("title-text-color");
+  }
+
+  &__link--project {
+    margin-left: 24px;
+
+    font-size: $font-size-name-team;
+    line-height: 1.88;
+    color: getColor("primary-text-color");
+  }
+}
