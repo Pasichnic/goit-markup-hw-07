@@ -1,0 +1,44 @@
+.clients {
+  @extend %sectionPadding;
+
+  &-title {
+    @extend %titleMargin;
+
+    font-weight: $font-bold;
+    font-size: $font-size-title;
+    line-height: 1.17;
+
+    color: getColor("title-text-color");
+    text-align: center;
+  }
+}
+
+.clients-list {
+  display: flex;
+  justify-content: space-between;
+
+  &__link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 170px;
+    height: 92px;
+    border: 1px solid getColor("icon-color");
+    border-radius: 4px;
+    color: getColor("icon-color");
+
+    @include transition(border);
+
+    &:hover,
+    &:focus {
+      border: 1px solid getColor("accent-color");
+      color: getColor("accent-color");
+    }
+  }
+
+  &__link--icon {
+    @include transition(color);
+    fill: currentColor;
+  }
+}
