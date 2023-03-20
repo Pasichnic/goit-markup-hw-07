@@ -1,0 +1,24 @@
+.heroes-button {
+  display: block;
+
+  padding: 10px 32px;
+  font-style: normal;
+
+  @include fontParam(700, 16px, 1.88, 00.06em);
+
+  color: getColor("white-text-color");
+  background: getColor("accent-color");
+  box-shadow: getColor("shadow-button-color");
+  text-shadow: getColor("text-shadow-button");
+  
+  @include transition(background-color);
+  border-radius: 4px;
+
+  margin: auto;
+  border: none;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    background: getColor("button-color");
+  }
+}
