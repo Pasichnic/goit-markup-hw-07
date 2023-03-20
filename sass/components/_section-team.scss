@@ -1,0 +1,92 @@
+.team {
+  background: getColor("background-team-color");
+}
+.team-container {
+  @extend %sectionPadding;
+}
+.team-title {
+  @extend %titleMargin;
+  font-weight: $font-bold;
+  font-size: $font-size-title;
+  line-height: 1.17;
+
+  text-align: center;
+
+  color: getColor("title-text-color");
+}
+.team-list {
+  display: flex;
+  img {
+    display: block;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    display: block;
+    margin-right: 30px;
+    padding-bottom: 30px;
+
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: getColor("box-shadow-team");
+  }
+
+  width: calc((100% - 90px) / 4);
+  :nth-child(4n) {
+    margin-right: 0;
+  }
+
+  &__name {
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    font-weight: $font-medium;
+    font-size: $font-size-name-team;
+    line-height: 1.19;
+
+    color: getColor("title-text-color");
+    text-align: center;
+  }
+
+  &__profesion {
+    font-size: $font-size-name-team;
+    line-height: 1.19;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+}
+
+.team-boxIcon {
+  display: flex;
+  justify-content: space-between;
+
+  width: 206px;
+  height: 44px;
+  margin-left: 32px;
+  margin-right: 32px;
+
+  &__link {
+    display: flex;
+
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+
+    @include transition(background-color);
+
+    align-items: center;
+    justify-content: center;
+
+    &:hover,
+    &:focus {
+      background-color: getColor("accent-color");
+      color: getColor("white-text-color");
+    }
+
+    color: getColor("icon-color");
+  }
+
+  &__socialIcon {
+    fill: currentColor;
+  }
+}
